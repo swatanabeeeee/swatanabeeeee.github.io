@@ -1,7 +1,7 @@
 miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
-      bottomBar: {
+      toolbar: {
         title: 'Sticker to shapes',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
