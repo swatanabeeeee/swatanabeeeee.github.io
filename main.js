@@ -13,7 +13,7 @@ miro.onReady(() => {
           // Filter stickers from selected widgets
           let treasure = selectedWidgets.filter((widget) => widget.id === '307445736619852566')
           if(treasure.id=='307445736619852566'){
-            miro.showNotification('宝島のボードはこちら！\nhttps://miro.com/app/board/o9J_lo2orEo=/?moveToWidget=3074457366198822686&cot=14')
+            miro.showNotification('宝島のボードはこちら！\n https://miro.com/app/board/o9J_lo2orEo=/?moveToWidget=3074457366198822686&cot=14')
           }
 
           // Delete selected stickers
@@ -21,25 +21,15 @@ miro.onReady(() => {
 
           // Create shapes from selected stickers
           await miro.board.widgets.create(
-            {
-              type: 'text',
-              text: "🎉",
-              x: treasure.x,
-              y: treasure.y,
+            selectedWidgets.map((widget) => ({
+              type: 'shape',
+              text: "aaa",
+              x: widget.x,
+              y: widget.y,
               width: 100,
               height: 100,
-            }
+            })),
           )
-
-            // selectedWidgets.map((widget) => ({
-            //   type: 'shape',
-            //   text: "aaa",
-            //   x: widget.x,
-            //   y: widget.y,
-            //   width: 100,
-            //   height: 100,
-            // })),
-          
 
           // Show success message
           // miro.showNotification('https://miro.com/app/board/o9J_lo2orEo=/?moveToWidget=3074457366198822686&cot=14')
