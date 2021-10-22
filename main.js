@@ -19,10 +19,10 @@ miro.onReady(() => {
           // Create shapes from selected stickers
           await miro.board.widgets.create(
             selectedWidgets.map((widget) => ({
-              type: 'text',
+              type: 'shape',
               text: "aaa",
-              x: 0,
-              y: 0,
+              x: widget.x,
+              y: widget.y,
               width: 100,
               height: 100,
             })),
