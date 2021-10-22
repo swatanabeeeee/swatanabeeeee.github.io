@@ -2,7 +2,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: 'treasure',
+        title: 'treasure2',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -19,10 +19,10 @@ miro.onReady(() => {
           // Create shapes from selected stickers
           await miro.board.widgets.create(
             widgets.map((widget) => ({
-              type: 'shape',
+              type: 'text',
               text: "aaa",
-              x: widget.x,
-              y: widget.y,
+              x: 0,
+              y: 0,
               width: 100,
               height: 100,
             })),
