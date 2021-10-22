@@ -11,25 +11,38 @@ miro.onReady(() => {
           let selectedWidgets = await miro.board.selection.get()
 
           // Filter stickers from selected widgets
-          // let stickers = selectedWidgets.filter((widget) => widget.type === 'STICKER')
+          let treasure = selectedWidgets.filter((widget) => widget.id === '307445736619852566')
+          if(treasure.id=='307445736619852566'){
+            miro.showNotification('宝島のボードはこちら！\nhttps://miro.com/app/board/o9J_lo2orEo=/?moveToWidget=3074457366198822686&cot=14')
+          }
 
           // Delete selected stickers
-          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
+          // await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
           await miro.board.widgets.create(
-            selectedWidgets.map((widget) => ({
-              type: 'shape',
-              text: "aaa",
-              x: widget.x,
-              y: widget.y,
+            {
+              type: 'text',
+              text: "🎉",
+              x: treasure.x,
+              y: treasure.y,
               width: 100,
               height: 100,
-            })),
+            }
           )
 
+            // selectedWidgets.map((widget) => ({
+            //   type: 'shape',
+            //   text: "aaa",
+            //   x: widget.x,
+            //   y: widget.y,
+            //   width: 100,
+            //   height: 100,
+            // })),
+          
+
           // Show success message
-          miro.showNotification('Stickers has been converted')
+          // miro.showNotification('https://miro.com/app/board/o9J_lo2orEo=/?moveToWidget=3074457366198822686&cot=14')
         },
       },
     },
