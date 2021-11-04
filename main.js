@@ -2,7 +2,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: 'treasure7',
+        title: 'treasure8',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -20,7 +20,7 @@ miro.onReady(() => {
           await miro.board.widgets.create(
             selectedWidgets.map((widget) => ({
               type: 'shape',
-              text: "aaa",
+              text: "おめでとうございます",
               x: widget.x,
               y: widget.y,
               width: 100,
@@ -29,7 +29,7 @@ miro.onReady(() => {
           )
 
           // Show success message
-          miro.showNotification('Stickers has been converted')
+          miro.showNotification('NICE!!')
         },
       },
     },
