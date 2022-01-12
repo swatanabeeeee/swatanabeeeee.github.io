@@ -2,7 +2,7 @@ miro.onReady(() => {
   //時刻取得
   let now = new Date();
   console.log(now.getHours())
-
+  getWidget()
   console.log("okok")
 })
 
