@@ -26,7 +26,7 @@ miro.onReady(() => {
               width: 500,
               height: 500,
               style: {
-                borderColor : "#f24726",
+                backgroundColor : "#f24726",
               }
             })),
           )
