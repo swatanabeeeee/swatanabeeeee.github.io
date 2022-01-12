@@ -17,16 +17,16 @@ miro.onReady(() => {
 //           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
-          let colortext = ""
-          if(selectedWidgets.style.backgroundColor =="#8fd14f"){
-            colortext = "#f24726"
-          }
-          else if(selectedWidgets.style.backgroundColor =="#f24726"){
-            colortext = "#2d9bf0"
-          }
-          else if(selectedWidgets.style.backgroundColor =="#2d9bf0"){
-            colortext = "#8fd14f"
-          }
+          let colortext = "#f24726"
+//           if(selectedWidgets.style.backgroundColor =="#8fd14f"){
+//             colortext = "#f24726"
+//           }
+//           else if(selectedWidgets.style.backgroundColor =="#f24726"){
+//             colortext = "#2d9bf0"
+//           }
+//           else if(selectedWidgets.style.backgroundColor =="#2d9bf0"){
+//             colortext = "#8fd14f"
+//           }
           
           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
           
@@ -62,7 +62,7 @@ miro.onReady(() => {
           )
 
           // Show success message
-          miro.showNotification('NICE!!')
+          miro.showNotification(selectedWidgets)
         },
       },
     },
