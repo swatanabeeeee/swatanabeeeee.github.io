@@ -2,7 +2,8 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: 'sample8',
+        let count = 0
+        title: 'sample9',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -17,7 +18,6 @@ miro.onReady(() => {
           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
-          let count = 0
           count += 1
           let colortext = ""
           if(count%3==0){
