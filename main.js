@@ -9,7 +9,7 @@ miro.onReady(() => {
 async function getWidget() {
   let objects = await miro.board.widgets.get()
   let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
-  console.log(backWidget.style.backgroundColor)
+  console.log(backWidget[0].style.backgroundColor)
   // await miro.board.widgets.create(
   //   type: widget.type,
   //   text: "おめでとうございます",
