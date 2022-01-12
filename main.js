@@ -1,23 +1,30 @@
 miro.onReady(() => {
   //時刻取得
   let now = new Date();
-  console.log(now.getHours())
+  let hour = now.getHours();
+  console.log(hour)
   getWidget()
-  console.log("変更2")
 })
 
 async function getWidget() {
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
-  // let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
   console.log(objects[0].style.backgroundColor)
 
-
-
+  //時間によって変更
+  let colortext = "";
+  if(6<hour && 18>hour){
+    colortext = "#2d9bf0";
+    console.log("昼");
+  }
+  else{
+    colortext = "#f24726";
+    console.log("夜");
+  }
   miro.board.widgets.update(
     objects.map((widget) => ({
       id : widget.id,
       style: {
-        backgroundColor : "#f24726",
+        backgroundColor : colortext,
       }
     })),
   )
