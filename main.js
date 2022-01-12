@@ -9,7 +9,7 @@ miro.onReady(() => {
 //       backgroundColor : "#f24726",
 //     }
 //   )
-  console.log("ok")
+  console.log("okok")
 })
 
   
