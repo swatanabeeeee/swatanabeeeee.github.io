@@ -1,5 +1,7 @@
 miro.onReady(() => {
-  console.log("miro開始")
+  //時刻取得
+  let now = new Date();
+  console.log(now.getHours())
   miro.initialize({
     extensionPoints: {
       bottomBar: {
