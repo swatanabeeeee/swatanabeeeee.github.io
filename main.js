@@ -17,19 +17,47 @@ miro.onReady(() => {
           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
-          await miro.board.widgets.create(
-            selectedWidgets.map((widget) => ({
-              type: 'shape',
-              text: "おめでとうございます",
-              x: widget.x,
-              y: widget.y,
-              width: 500,
-              height: 500,
-              style: {
-                backgroundColor : "#f24726",
+          let count = 0
+          count += 1
+          await miro.board.widgets.update(
+            if(count%3==0){
+              selectedWidgets.map((widget) => ({
+                  backgroundColor : "#f24726",
+              }))
+            }
+            if(count%3==1){
+                selectedWidgets.map((widget) => ({
+                    backgroundColor : "#2d9bf0",
+                }))
               }
-            })),
+            if(count%3==2){
+                selectedWidgets.map((widget) => ({
+                    backgroundColor : "#8fd14f",
+                }))
+              }
+          
+          
+          
+          
+//             selectedWidgets.map((widget) => ({
+//                 backgroundColor : "#f24726",
+//             })),
           )
+          
+                  
+//           await miro.board.widgets.create(
+//             selectedWidgets.map((widget) => ({
+//               type: 'shape',
+//               text: "おめでとうございます",
+//               x: widget.x,
+//               y: widget.y,
+//               width: 500,
+//               height: 500,
+//               style: {
+//                 backgroundColor : "#f24726",
+//               }
+//             })),
+//           )
 
           // Show success message
           miro.showNotification('NICE!!')
