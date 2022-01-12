@@ -3,7 +3,7 @@ miro.onReady(() => {
   let now = new Date();
   console.log(now.getHours())
   getWidget()
-  console.log("okokokok")
+  console.log("変更")
 })
 
 async function getWidget() {
