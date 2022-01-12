@@ -3,13 +3,20 @@ miro.onReady(() => {
   let now = new Date();
   console.log(now.getHours())
   getWidget()
-  console.log("okok")
+  console.log("okokokok")
 })
 
 async function getWidget() {
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
   // let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
   console.log(objects[0].style.backgroundColor)
+  miro.board.widgets.update(
+    objects[0].text = "おめでとうございます"
+  )
+
+
+
+
   // await miro.board.widgets.create(
   //   type: widget.type,
   //   text: "おめでとうございます",
