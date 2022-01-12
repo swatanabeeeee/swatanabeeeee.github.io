@@ -39,39 +39,19 @@ miro.onReady(() => {
 //           )
           
           
-          
-          
-//             selectedWidgets.map((widget) => ({
-//                 backgroundColor : "#f24726",
-//             })),
-          
-          
-          await miro.board.widgets.update(
-           selectedWidgets.map((widget) => ({
-              type: 'shape',
-              text: "おめでとうございます",
+          await miro.board.widgets.create(
+            selectedWidgets.map((widget) => ({
+              type: widget.type,
+//               text: "おめでとうございます",
               x: widget.x,
               y: widget.y,
-              width: 500,
-              height: 500,
+              width: widget.width,
+              height: widget.height,
               style: {
                 backgroundColor : colortext,
               }
             })),
           )
-//           await miro.board.widgets.create(
-//             selectedWidgets.map((widget) => ({
-//               type: 'shape',
-//               text: "おめでとうございます",
-//               x: widget.x,
-//               y: widget.y,
-//               width: 500,
-//               height: 500,
-//               style: {
-//                 backgroundColor : colortext,
-//               }
-//             })),
-//           )
 
           // Show success message
 //           miro.showNotification(selectedWidgets)
