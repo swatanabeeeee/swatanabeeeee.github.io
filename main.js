@@ -21,6 +21,7 @@ miro.onReady(() => {
             selectedWidgets.map((widget) => ({
               type: 'shape',
               text: "おめでとうございます",
+              backgroundColor : "#f24726",
               x: widget.x,
               y: widget.y,
               width: 500,
