@@ -15,7 +15,7 @@ async function getWidget() {
 
   miro.board.widgets.update(
     objects.map((widget) => ({
-      id : widgets.id,
+      id : widget.id,
       style: {
         backgroundColor : "#f24726",
       }
