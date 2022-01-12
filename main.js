@@ -2,6 +2,40 @@ miro.onReady(() => {
   //時刻取得
   let now = new Date();
   console.log(now.getHours())
+
+  console.log("okok")
+})
+
+async function getWidget() {
+  let objects = await miro.board.widgets.get()
+  let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
+  // await miro.board.widgets.create(
+  //   type: widget.type,
+  //   text: "おめでとうございます",
+  //   x: widget.x,
+  //   y: widget.y,
+  //   width: widget.width,
+  //   height: widget.height,
+  //   style: {
+  //     backgroundColor : colortext,
+  //   }
+  // )
+}
+
+
+
+
+
+
+
+  //   backWidget.update(
+  //   style: {
+  //     backgroundColor : "#f24726",
+  //   }
+  // )
+
+
+
 //   let objects = await miro.board.widgets.get()
 //   let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
 //   backWidget.update(
@@ -9,9 +43,6 @@ miro.onReady(() => {
 //       backgroundColor : "#f24726",
 //     }
 //   )
-  console.log("okok")
-})
-
   
 //   miro.initialize({
 //     extensionPoints: {
