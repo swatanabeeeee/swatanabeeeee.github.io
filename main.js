@@ -63,7 +63,7 @@ miro.onReady(() => {
 
           // Show success message
 //           miro.showNotification(selectedWidgets)
-          console.log(selectedWidgets.style)
+          console.log(selectedWidgets[0])
         },
       },
     },
