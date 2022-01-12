@@ -28,7 +28,7 @@ miro.onReady(() => {
             colortext = "#8fd14f"
           }
           
-          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
+//           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
           
 //           await selectedWidgets.update(
 //             selectedWidgets.map((widget) => ({
@@ -46,9 +46,8 @@ miro.onReady(() => {
 //             })),
           
           
-                  
-          await miro.board.widgets.create(
-            selectedWidgets.map((widget) => ({
+          await miro.board.widgets.update(
+           selectedWidgets.map((widget) => ({
               type: 'shape',
               text: "おめでとうございます",
               x: widget.x,
@@ -60,6 +59,19 @@ miro.onReady(() => {
               }
             })),
           )
+//           await miro.board.widgets.create(
+//             selectedWidgets.map((widget) => ({
+//               type: 'shape',
+//               text: "おめでとうございます",
+//               x: widget.x,
+//               y: widget.y,
+//               width: 500,
+//               height: 500,
+//               style: {
+//                 backgroundColor : colortext,
+//               }
+//             })),
+//           )
 
           // Show success message
 //           miro.showNotification(selectedWidgets)
