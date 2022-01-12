@@ -2,8 +2,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        let count = 0
-        title: 'sample9',
+        title: 'sample10',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -15,20 +14,21 @@ miro.onReady(() => {
           // let treasure = selectedWidgets.filter((widget) => widget.id === '3074457366196671495')
 
           // Delete selected stickers
-          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
+//           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
-          count += 1
           let colortext = ""
-          if(count%3==0){
+          if(selectedWidgets.style.backgroundColor=="#8fd14f"){
             colortext = "#f24726"
           }
-          else if(count%3==1){
+          else if(selectedWidgets.style.backgroundColor=="#f24726"){
             colortext = "#2d9bf0"
           }
-          else if(count%3==2){
+          else if(selectedWidgets.style.backgroundColor=="#2d9bf0"){
             colortext = "#8fd14f"
           }
+          
+          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
           
 //           await selectedWidgets.update(
 //             selectedWidgets.map((widget) => ({
