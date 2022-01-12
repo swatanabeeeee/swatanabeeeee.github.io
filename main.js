@@ -1,4 +1,5 @@
 miro.onReady(() => {
+  console.log("miro開始")
   miro.initialize({
     extensionPoints: {
       bottomBar: {
