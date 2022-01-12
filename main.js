@@ -14,7 +14,7 @@ miro.onReady(() => {
           // let treasure = selectedWidgets.filter((widget) => widget.id === '3074457366196671495')
 
           // Delete selected stickers
-//           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
+          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
           let colortext = "#f24726"
