@@ -18,13 +18,13 @@ miro.onReady(() => {
 
           // Create shapes from selected stickers
           let colortext = ""
-          if(selectedWidgets.style.backgroundColor=="#8fd14f"){
+          if(selectedWidgets.style.backgroundColor =="#8fd14f"){
             colortext = "#f24726"
           }
-          else if(selectedWidgets.style.backgroundColor=="#f24726"){
+          else if(selectedWidgets.style.backgroundColor =="#f24726"){
             colortext = "#2d9bf0"
           }
-          else if(selectedWidgets.style.backgroundColor=="#2d9bf0"){
+          else if(selectedWidgets.style.backgroundColor =="#2d9bf0"){
             colortext = "#8fd14f"
           }
           
