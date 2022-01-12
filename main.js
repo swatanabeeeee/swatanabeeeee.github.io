@@ -2,7 +2,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: 'sample3',
+        title: 'sample4',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -19,22 +19,24 @@ miro.onReady(() => {
           // Create shapes from selected stickers
           let count = 0
           count += 1
+          let colortext = ""
+          if(count%3==0){
+            colortext = "#f24726"
+          }
+          else if(count%3==1){
+            colortext = "#2d9bf0"
+          }
+          else(count%3==2){
+            colortext = "#8fd14f"
+          }
+          
           await miro.board.widgets.update(
-            if(count%3==0){
-              selectedWidgets.map((widget) => ({
-                  backgroundColor : "#f24726",
-              }))
-            }
-            if(count%3==1){
-                selectedWidgets.map((widget) => ({
-                    backgroundColor : "#2d9bf0",
-                }))
+            selectedWidgets.map((widget) => ({
+              style: {
+                  backgroundColor : colortext,
               }
-            if(count%3==2){
-                selectedWidgets.map((widget) => ({
-                    backgroundColor : "#8fd14f",
-                }))
-              }
+            }))
+          )
           
           
           
@@ -42,7 +44,7 @@ miro.onReady(() => {
 //             selectedWidgets.map((widget) => ({
 //                 backgroundColor : "#f24726",
 //             })),
-          )
+          
           
                   
 //           await miro.board.widgets.create(
