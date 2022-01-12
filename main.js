@@ -2,7 +2,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: 'sample6',
+        title: 'sample7',
         svgIcon:
           '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
         positionPriority: 1,
@@ -14,7 +14,7 @@ miro.onReady(() => {
           // let treasure = selectedWidgets.filter((widget) => widget.id === '3074457366196671495')
 
           // Delete selected stickers
-//           await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
+          await miro.board.widgets.deleteById(selectedWidgets.map((widget) => widget.id))
 
           // Create shapes from selected stickers
           let count = 0
@@ -30,13 +30,13 @@ miro.onReady(() => {
             colortext = "#8fd14f"
           }
           
-          await selectedWidgets.update(
-            selectedWidgets.map((widget) => ({
-              style: {
-                  backgroundColor : colortext,
-              }
-            }))
-          )
+//           await selectedWidgets.update(
+//             selectedWidgets.map((widget) => ({
+//               style: {
+//                   backgroundColor : colortext,
+//               }
+//             }))
+//           )
           
           
           
@@ -47,19 +47,19 @@ miro.onReady(() => {
           
           
                   
-//           await miro.board.widgets.create(
-//             selectedWidgets.map((widget) => ({
-//               type: 'shape',
-//               text: "おめでとうございます",
-//               x: widget.x,
-//               y: widget.y,
-//               width: 500,
-//               height: 500,
-//               style: {
-//                 backgroundColor : "#f24726",
-//               }
-//             })),
-//           )
+          await miro.board.widgets.create(
+            selectedWidgets.map((widget) => ({
+              type: 'shape',
+              text: "おめでとうございます",
+              x: widget.x,
+              y: widget.y,
+              width: 500,
+              height: 500,
+              style: {
+                backgroundColor : colortext,
+              }
+            })),
+          )
 
           // Show success message
           miro.showNotification('NICE!!')
