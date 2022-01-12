@@ -26,7 +26,7 @@ miro.onReady(() => {
           else if(count%3==1){
             colortext = "#2d9bf0"
           }
-          else(count%3==2){
+          else if(count%3==2){
             colortext = "#8fd14f"
           }
           
