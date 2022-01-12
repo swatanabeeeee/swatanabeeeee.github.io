@@ -2,6 +2,16 @@ miro.onReady(() => {
   //時刻取得
   let now = new Date();
   console.log(now.getHours())
+  let objects = await miro.board.widgets.get()
+  let backWidget = objects.filter((widget) => widget.id === '3458764516401601937')
+  await backWidget.update(
+    style: {
+      backgroundColor : "#f24726",
+    }
+  )
+})
+
+  
 //   miro.initialize({
 //     extensionPoints: {
 //       bottomBar: {
@@ -63,4 +73,3 @@ miro.onReady(() => {
 //       },
 //     },
 //   })
-})
