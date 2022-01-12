@@ -1,12 +1,10 @@
 miro.onReady(() => {
   //時刻取得
-  let now = new Date();
-  let hour = now.getHours();
-  console.log(hour)
-  getWidget()
+  getWidget(new Date().getHours())
 })
 
-async function getWidget() {
+async function getWidget(hour) {
+  console.log(hour)
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
   console.log(objects[0].style.backgroundColor)
 
