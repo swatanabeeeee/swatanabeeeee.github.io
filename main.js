@@ -1,18 +1,12 @@
 miro.onReady(() => {
   //時刻取得
   getWidget(new Date().getHours())
-  console.log(miro.board)
+  let users = miro.board.getOnlineUsers();
+  users.forEach(user => console.log(user));
 })
 
 
-async function onAllWidgetsLoaded(callback) {
-  const areAllWidgetsLoaded = await miro.board.widgets.areAllWidgetsLoaded()
-  if (areAllWidgetsLoaded) {
-    callback()
-  } else {
-    miro.addListener('ALL_WIDGETS_LOADED', callback)
-  }
-}
+
 
 async function getWidget(hour) {
   console.log(hour)
@@ -48,13 +42,22 @@ async function getWidget(hour) {
       x : widget.x + 1000,
     })),
   )
+}
 
   //すべてのオブジェクトを読み込み完了
-  onAllWidgetsLoaded(() => {
-    console.log('all widgets are loaded')
-    console.log(miro.board.getOnlineUsers())
-  })
-}
+//   onAllWidgetsLoaded(() => {
+//     console.log('all widgets are loaded')
+//     console.log(miro.board.getOnlineUsers())
+//   })
+// }
+// async function onAllWidgetsLoaded(callback) {
+//   const areAllWidgetsLoaded = await miro.board.widgets.areAllWidgetsLoaded()
+//   if (areAllWidgetsLoaded) {
+//     callback()
+//   } else {
+//     miro.addListener('ALL_WIDGETS_LOADED', callback)
+//   }
+// }
 
 
 
@@ -69,11 +72,6 @@ async function getWidget(hour) {
   //     backgroundColor : colortext,
   //   }
   // )
-
-
-
-
-
 
 
 
