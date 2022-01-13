@@ -7,7 +7,6 @@ miro.onReady(() => {
 })
 
 async function getUser() {
-  let users = [];
   await miro.board.getOnlineUsers()
   .then((result) => {
     console.log(result.length);
