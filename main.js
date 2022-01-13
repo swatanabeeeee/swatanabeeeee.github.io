@@ -9,7 +9,7 @@ miro.onReady(() => {
 async function getUser() {
   await miro.board.getOnlineUsers()
   .then((result) => {
-    console.log(result.length);
+    console.log("現在のオンライン人数",result.length);
   })
   .catch((err) => {
     console.log(err);
