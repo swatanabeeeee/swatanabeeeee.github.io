@@ -5,7 +5,11 @@ miro.onReady(() => {
 
 async function getWidget(hour) {
   console.log(hour)
+  //0:背景　1:image
+  console.log(miro.board.id)
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
+  let images = await miro.board.widgets.get({id: '3458764516442959651'})
+
   console.log(objects[0].style.backgroundColor)
 
   //時間によって変更
@@ -26,6 +30,16 @@ async function getWidget(hour) {
       }
     })),
   )
+
+
+  //画像を動かしてみる
+  miro.board.widgets.update(
+    images.map((widget) => ({
+      id : widget.id,
+      x : widgets.x + 100,
+    })),
+  )
+
 }
 
 
