@@ -6,7 +6,7 @@ miro.onReady(() => {
 async function getWidget(hour) {
   console.log(hour)
   //0:背景　1:image
-  console.log(miro.board.get())
+  console.log(miro.board)
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
   let images = await miro.board.widgets.get({id: '3458764516442959651'})
 
