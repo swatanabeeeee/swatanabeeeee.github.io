@@ -36,7 +36,7 @@ async function getWidget(hour) {
   miro.board.widgets.update(
     images.map((widget) => ({
       id : widget.id,
-      x : widget.x + 100,
+      x : widget.x + 1000,
     })),
   )
 
