@@ -1,10 +1,14 @@
 miro.onReady(() => {
   //時刻取得
   getWidget(new Date().getHours())
-  let users;
+  getUser();
   // users.forEach(user => console.log(user));
   // console.log(miro.board.getOnlineUsers())
-  miro.board.getOnlineUsers()
+})
+
+async function getUser() {
+  let users = [];
+  await miro.board.getOnlineUsers()
   .then((result) => {
     console.log(result[0]);
     users = result[0]
@@ -12,11 +16,8 @@ miro.onReady(() => {
   .catch((err) => {
     console.log(err);
   });
-})
   users.forEach(user => console.log(user));
-
-
-
+}
 
 
 async function getWidget(hour) {
