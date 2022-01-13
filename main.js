@@ -3,7 +3,14 @@ miro.onReady(() => {
   getWidget(new Date().getHours())
   // let users = miro.board.getOnlineUsers().result;
   // users.forEach(user => console.log(user));
-  console.log(miro.board.getOnlineUsers())
+  // console.log(miro.board.getOnlineUsers())
+  miro.board.getOnlineUsers()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 })
 
 
