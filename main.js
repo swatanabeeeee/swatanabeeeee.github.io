@@ -52,7 +52,7 @@ async function getWidget(hour) {
   //すべてのオブジェクトを読み込み完了
   onAllWidgetsLoaded(() => {
     console.log('all widgets are loaded')
-    console.log(miro.board.info)
+    console.log(miro.board.getOnlineUsers)
   })
 }
 
