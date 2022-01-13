@@ -1,8 +1,9 @@
 miro.onReady(() => {
   //時刻取得
   getWidget(new Date().getHours())
-  let users = miro.board.getOnlineUsers().result;
-  users.forEach(user => console.log(user));
+  // let users = miro.board.getOnlineUsers().result;
+  // users.forEach(user => console.log(user));
+  console.log(miro.board.getOnlineUsers())
 })
 
 
