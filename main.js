@@ -4,14 +4,23 @@ miro.onReady(() => {
   console.log(miro.board)
 })
 
+
+async function onAllWidgetsLoaded(callback) {
+  const areAllWidgetsLoaded = await miro.board.widgets.areAllWidgetsLoaded()
+  if (areAllWidgetsLoaded) {
+    callback()
+  } else {
+    miro.addListener('ALL_WIDGETS_LOADED', callback)
+  }
+}
+
 async function getWidget(hour) {
   console.log(hour)
   //0:背景　1:image
   let objects = await miro.board.widgets.get({id: '3458764516401601937'})
   let images = await miro.board.widgets.get({id: '3458764516442959651'})
 
-  console.log(objects[0].style.backgroundColor)
-
+  // console.log(objects[0].style.backgroundColor)
   //時間によって変更
   let colortext = "";
   if(6<hour && 18>hour){
@@ -40,6 +49,11 @@ async function getWidget(hour) {
     })),
   )
 
+  //すべてのオブジェクトを読み込み完了
+  onAllWidgetsLoaded(() => {
+    console.log('all widgets are loaded')
+    console.log(miro.board)
+  })
 }
 
 
