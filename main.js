@@ -2,8 +2,6 @@ miro.onReady(() => {
   //時刻取得
   getWidget(new Date().getHours())
   getUser();
-  // users.forEach(user => console.log(user));
-  // console.log(miro.board.getOnlineUsers())
 })
 
 async function getUser() {
@@ -59,6 +57,16 @@ async function getWidget(hour) {
     })),
   )
 }
+
+
+
+
+
+
+
+
+  // users.forEach(user => console.log(user));
+  // console.log(miro.board.getOnlineUsers())
 
   //すべてのオブジェクトを読み込み完了
 //   onAllWidgetsLoaded(() => {
