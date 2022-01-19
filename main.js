@@ -5,6 +5,7 @@ miro.onReady(() => {
       console.log('Web plugin authorized');
     } else {
       console.log('Unauthorized');
+      await miro.requestAuthorization()
     }
   })
   //時刻取得
