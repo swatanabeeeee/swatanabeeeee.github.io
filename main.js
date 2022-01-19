@@ -66,6 +66,7 @@ window.on('beforeunload', function(e) {
       x : widget.x + 1000,
     },
   )
+  return "閉じる"
 });
 
 
