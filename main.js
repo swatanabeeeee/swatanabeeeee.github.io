@@ -59,15 +59,15 @@ async function getWidget(hour) {
   )
 }
 
-window.on('beforeunload', function(e) {
-  miro.board.widgets.update(
-    {
-      id : "3458764516442959651",
-      x : widget.x + 1000,
-    },
-  )
-  return "閉じる"
-});
+// window.on('beforeunload', function(e) {
+//   miro.board.widgets.update(
+//     {
+//       id : "3458764516442959651",
+//       x : widget.x + 1000,
+//     },
+//   )
+//   return "閉じる"
+// });
 
 
 
