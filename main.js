@@ -1,5 +1,5 @@
 miro.onReady(() => {
-
+  //認証確認
   miro.isAuthorized().then( (isAuthorized) => {
     if (isAuthorized) {
       console.log('Web plugin authorized');
@@ -7,22 +7,21 @@ miro.onReady(() => {
       console.log('Unauthorized');
     }
   })
-
   //時刻取得
   getWidget(new Date().getHours())
   getUser();
 })
 
 async function getUser() {
-  let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
+  // let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
   await miro.board.getOnlineUsers()
   .then((result) => {
     //オンライン人数を更新
     miro.board.widgets.update(
-      onlineCount.map((widget) => ({
-        id : widget.id,
+      {
+        id : "3458764516879906156",
         text :result.length
-      })),
+      },
     )
     console.log("現在のオンライン人数",result.length);
   })
@@ -30,7 +29,6 @@ async function getUser() {
     console.log(err);
   });
 }
-
 
 async function getWidget(hour) {
   console.log(hour)
@@ -62,7 +60,7 @@ async function getWidget(hour) {
   miro.board.widgets.update(
     images.map((widget) => ({
       id : widget.id,
-      x : widget.x + 1000,
+      x : widget.x + 10,
     })),
   )
 }
