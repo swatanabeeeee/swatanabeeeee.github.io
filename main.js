@@ -9,6 +9,14 @@ miro.onReady(() => {
 async function getUser() {
   await miro.board.getOnlineUsers()
   .then((result) => {
+    let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
+    //オンライン人数を更新
+    miro.board.widgets.update(
+      images.map((widget) => ({
+        id : widget.id,
+        text :result.length
+      })),
+    )
     console.log("現在のオンライン人数",result.length);
   })
   .catch((err) => {
@@ -42,7 +50,6 @@ async function getWidget(hour) {
       }
     })),
   )
-
 
   //画像を動かしてみる
   miro.board.widgets.update(
