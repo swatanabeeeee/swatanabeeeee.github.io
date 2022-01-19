@@ -13,7 +13,6 @@ miro.onReady(() => {
 })
 
 async function getUser() {
-  // let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
   await miro.board.getOnlineUsers()
   .then((result) => {
     //オンライン人数を更新
@@ -31,12 +30,7 @@ async function getUser() {
 }
 
 async function getWidget(hour) {
-  console.log(hour)
-  //0:背景　1:image
-  let objects = await miro.board.widgets.get({id: '3458764516401601937'})
-  let images = await miro.board.widgets.get({id: '3458764516442959651'})
-
-  // console.log(objects[0].style.backgroundColor)
+  console.log(hour, "時")
   //時間によって変更
   let colortext = "";
   if(6<hour && 18>hour){
@@ -48,20 +42,20 @@ async function getWidget(hour) {
     console.log("夜");
   }
   miro.board.widgets.update(
-    objects.map((widget) => ({
-      id : widget.id,
+    {
+      id : "3458764516401601937",
       style: {
         backgroundColor : colortext,
       }
-    })),
+    },
   )
 
   //画像を動かしてみる
   miro.board.widgets.update(
-    images.map((widget) => ({
-      id : widget.id,
+    {
+      id : "3458764516442959651",
       x : widget.x + 10,
-    })),
+    },
   )
 }
 
