@@ -59,6 +59,11 @@ async function getWidget(hour) {
   )
 }
 
+window.on('beforeunload', function(e) {
+  // ウィンドウを閉じる時にメッセージを表示する.
+  let result = confirm('本当に閉じていいの？');
+  return result;
+});
 
 
 
