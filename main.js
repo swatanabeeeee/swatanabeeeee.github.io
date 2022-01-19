@@ -60,7 +60,7 @@ async function getWidget(hour) {
   miro.board.widgets.update(
     {
       id : "3458764516442959651",
-      x : this.x + 2000,
+      x : 3000,
     },
   )
 }
