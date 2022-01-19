@@ -12,7 +12,7 @@ async function Authorization() {
       console.log('Web plugin authorized');
     } else {
       console.log('Unauthorized');
-      await miro.requestAuthorization()
+      miro.requestAuthorization()
     }
   })
 }
