@@ -1,6 +1,13 @@
 miro.onReady(() => {
+  //時刻取得
+  Authorization();
+  getWidget(new Date().getHours())
+  getUser();
+})
+
+async function Authorization() {
   //認証確認
-  miro.isAuthorized().then( (isAuthorized) => {
+  await miro.isAuthorized().then( (isAuthorized) => {
     if (isAuthorized) {
       console.log('Web plugin authorized');
     } else {
@@ -8,10 +15,7 @@ miro.onReady(() => {
       await miro.requestAuthorization()
     }
   })
-  //時刻取得
-  getWidget(new Date().getHours())
-  getUser();
-})
+}
 
 async function getUser() {
   await miro.board.getOnlineUsers()
