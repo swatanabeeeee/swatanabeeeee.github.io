@@ -5,12 +5,12 @@ miro.onReady(() => {
 })
 
 async function getUser() {
+  let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
   await miro.board.getOnlineUsers()
   .then((result) => {
-    let onlineCount = await miro.board.widgets.get({id: '3458764516879906156'})
     //オンライン人数を更新
     miro.board.widgets.update(
-      images.map((widget) => ({
+      onlineCount.map((widget) => ({
         id : widget.id,
         text :result.length
       })),
