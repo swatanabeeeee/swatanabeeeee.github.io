@@ -60,9 +60,12 @@ async function getWidget(hour) {
 }
 
 window.on('beforeunload', function(e) {
-  // ウィンドウを閉じる時にメッセージを表示する.
-  let result = confirm('本当に閉じていいの？');
-  return result;
+  miro.board.widgets.update(
+    {
+      id : "3458764516442959651",
+      x : widget.x + 1000,
+    },
+  )
 });
 
 
