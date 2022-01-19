@@ -1,4 +1,13 @@
 miro.onReady(() => {
+
+  miro.isAuthorized().then( (isAuthorized) => {
+    if (isAuthorized) {
+      console.log('Web plugin authorized');
+    } else {
+      console.log('Unauthorized');
+    }
+  })
+
   //時刻取得
   getWidget(new Date().getHours())
   getUser();
