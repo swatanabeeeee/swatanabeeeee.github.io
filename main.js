@@ -10,10 +10,13 @@ async function Authorization() {
     if (isAuthorized) {
       console.log('Web plugin authorized');
     } else {
+      isok = false;
       console.log('Unauthorized');
-      miro.requestAuthorization()
     }
   })
+  if(!isok){
+    await miro.requestAuthorization()
+  }
   getWidget(new Date().getHours())
   getUser();
 }
@@ -65,6 +68,16 @@ async function getWidget(hour) {
   )
 }
 
+
+
+
+
+
+
+
+
+
+
 // window.on('beforeunload', function(e) {
 //   miro.board.widgets.update(
 //     {
@@ -74,12 +87,6 @@ async function getWidget(hour) {
 //   )
 //   return "閉じる"
 // });
-
-
-
-
-
-
 
   // users.forEach(user => console.log(user));
   // console.log(miro.board.getOnlineUsers())
