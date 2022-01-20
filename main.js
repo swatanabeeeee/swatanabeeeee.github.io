@@ -1,3 +1,6 @@
+const jsonData= require('kitchen.json');
+print(jsonData)
+
 miro.onReady(() => {
   //時刻取得
   Authorization();
