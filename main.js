@@ -1,4 +1,4 @@
-const jsonData= require('kitchen.json');
+import jsonData from "jsonData"
 console.log(jsonData)
 
 miro.onReady(() => {
