@@ -1,5 +1,5 @@
 const jsonData= require('kitchen.json');
-print(jsonData)
+console.log(jsonData)
 
 miro.onReady(() => {
   //時刻取得
