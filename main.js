@@ -1,6 +1,5 @@
-console.log("あああ")
-import ExportKitchenData from "kitchenData.js";
-console.log(ExportKitchenData())
+const kitchenData = [{"12月1日": {"A": "ウッキー,トンちゃんくん", "B": "Daikichi", "C": "", "D": "吉吾", "E": "キッチンカー・アド", "F": "いか焼きみなせん", "G": "Kyotoケバブ屋", "H": "鉄平", "I": "じぃじの餃子", "J": "MONKAZI", "K": "T-STAR"}}];
+console.log(kitchenData)
 
 miro.onReady(() => {
   //時刻取得
