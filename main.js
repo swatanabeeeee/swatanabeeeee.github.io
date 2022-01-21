@@ -1,3 +1,4 @@
+console.log("あああ")
 import ExportKitchenData from "kitchenData"
 console.log(ExportKitchenData())
 
