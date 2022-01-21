@@ -1,5 +1,5 @@
-import jsonData from "jsonData"
-console.log(jsonData)
+import ExportKitchenData from "kitchenData"
+console.log(ExportKitchenData())
 
 miro.onReady(() => {
   //時刻取得
