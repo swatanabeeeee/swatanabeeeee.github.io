@@ -1,5 +1,5 @@
 console.log("あああ")
-import ExportKitchenData from "kitchenData"
+import {ExportKitchenData} from "kitchenData.js";
 // console.log(ExportKitchenData())
 
 miro.onReady(() => {
