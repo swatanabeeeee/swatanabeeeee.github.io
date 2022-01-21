@@ -3,7 +3,7 @@ console.log(kitchenData)
 
 miro.onReady(() => {
   //時刻取得
-  console.log(miro.board)
+  console.log(miro.board.info())
   Authorization();
 })
 
