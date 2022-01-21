@@ -1,6 +1,6 @@
 console.log("あああ")
 import {ExportKitchenData} from "kitchenData.js";
-// console.log(ExportKitchenData())
+console.log(ExportKitchenData())
 
 miro.onReady(() => {
   //時刻取得
