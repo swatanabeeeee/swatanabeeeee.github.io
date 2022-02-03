@@ -41,8 +41,7 @@ async function Authorization() {
 
 async function ChangeLocation(date) {
   today = date.getMonth() + "月" + date.getDate() + "日";
-  console.log(kitchenData[today])
-
+  console.log("情報", kitchenData[today])
 }
 
 //オンライン人数を取得し、更新
