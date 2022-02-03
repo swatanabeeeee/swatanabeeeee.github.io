@@ -43,8 +43,8 @@ async function Authorization() {
 async function ChangeLocation(date) {
   today = (date.getMonth()+1) + "月" + date.getDate() + "日";
   console.log(today)
-  // console.log("情報", kitchenData[today])
-  console.log("情報2", kitchenData["2月3日"])
+  console.log("情報", kitchenData[today])
+  // console.log("情報2", kitchenData["2月3日"])
 
 }
 
