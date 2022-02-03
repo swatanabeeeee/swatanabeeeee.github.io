@@ -1,9 +1,20 @@
 const kitchenData = [{"12月1日": {"A": "ウッキー,トンちゃんくん", "B": "Daikichi", "C": "", "D": "吉吾", "E": "キッチンカー・アド", "F": "いか焼きみなせん", "G": "Kyotoケバブ屋", "H": "鉄平", "I": "じぃじの餃子", "J": "MONKAZI", "K": "T-STAR"}}];
-// console.log(kitchenData)
-// console.log("url",location.href);
+const LocationA = 0;
+const LocationB = 0;
+const LocationC = 0;
+const LocationD = 0;
+const LocationE = 0;
+const LocationF = 0;
+const LocationG = 0;
+const LocationH = 0;
+const LocationI = 0;
+const LocationJ = 0;
+const LocationK = 0;
+const ID_ukki = 3458764518031867936;
+const ID_tonchann = 3458764518031779508;
+const ID_daikichi = 3458764518031867948;
 
 miro.onReady(() => {
-  //時刻取得
   Authorization();
 })
 
@@ -18,17 +29,26 @@ async function Authorization() {
       console.log('Unauthorized');
     }
   })
+  //認証申請
   if(!isok){
     await miro.requestAuthorization()
   }
+  //プログラム実行
   getWidget(new Date().getHours())
+  ChangeLocation(new Date())
   getUser();
 }
 
+async function ChangeLocation(date) {
+  today = date.getMonth() + "月" + date.getDate() + "日";
+  console.log(kitchenData[today])
+
+}
+
+//オンライン人数を取得し、更新
 async function getUser() {
   await miro.board.getOnlineUsers()
   .then((result) => {
-    //オンライン人数を更新
     miro.board.widgets.update(
       {
         id : "3458764516879906156",
@@ -42,9 +62,9 @@ async function getUser() {
   });
 }
 
+//時間によって背景を変更
 async function getWidget(hour) {
   console.log(hour, "時")
-  //時間によって変更
   let colortext = "";
   if(6<hour && 18>hour){
     colortext = "#2d9bf0";
@@ -62,25 +82,15 @@ async function getWidget(hour) {
       }
     },
   )
-
-  //画像を動かしてみる
-  miro.board.widgets.update(
-    {
-      id : "3458764516442959651",
-      x : 3000,
-    },
-  )
 }
 
-
-
-
-
-
-
-
-
-
+// //画像を動かしてみる
+// miro.board.widgets.update(
+//   {
+//     id : "3458764516442959651",
+//     x : 3000,
+//   },
+// )
 
 // window.on('beforeunload', function(e) {
 //   miro.board.widgets.update(
