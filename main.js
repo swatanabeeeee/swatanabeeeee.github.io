@@ -1,4 +1,4 @@
-const kitchenData = [{"2月2日": {"A": "ウッキー,トンちゃんくん", "B": "Daikichi", "C": "", "D": "吉吾", "E": "キッチンカー・アド", "F": "いか焼きみなせん", "G": "Kyotoケバブ屋", "H": "鉄平", "I": "じぃじの餃子", "J": "MONKAZI", "K": "T-STAR"}}];
+const kitchenData = [{"2月3日": {"A": "ウッキー,トンちゃんくん", "B": "Daikichi", "C": "", "D": "吉吾", "E": "キッチンカー・アド", "F": "いか焼きみなせん", "G": "Kyotoケバブ屋", "H": "鉄平", "I": "じぃじの餃子", "J": "MONKAZI", "K": "T-STAR"}}];
 const LocationA = 0;
 const LocationB = 0;
 const LocationC = 0;
