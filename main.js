@@ -17,7 +17,8 @@ const ID_daikichi = 3458764518031867948;
 
 miro.onReady(() => {
   Authorization();
-  console.log(GetBoardId());
+  let loglog = GetBoardId()
+  console.log(loglog);
   // console.log(miro.board.getInfo().id)
 })
 
@@ -25,13 +26,13 @@ async function GetBoardId() {
   await miro.board.getInfo()
   .then((result) => {
     if(result.id=="o9J_lwQzDZE="){
-      return true;
+      return "ok";
     }
   })
   .catch((err) => {
     console.log(err);
   });
-  return false;
+  return "Unauthorized Board";
 }
 
 async function Authorization() {
