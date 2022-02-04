@@ -17,7 +17,7 @@ const ID_daikichi = 3458764518031867948;
 
 miro.onReady(() => {
   Authorization();
-  console.log(miro.board)
+  console.log(miro.board.get())
 })
 
 async function Authorization() {
