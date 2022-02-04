@@ -17,18 +17,21 @@ const ID_daikichi = 3458764518031867948;
 
 miro.onReady(() => {
   Authorization();
-  GetBoardId();
+  console.log(GetBoardId());
   // console.log(miro.board.getInfo().id)
 })
 
 async function GetBoardId() {
   await miro.board.getInfo()
   .then((result) => {
-    console.log("ボードID",result.id);
+    if(result.id=="o9J_lwQzDZE="){
+      return true;
+    }
   })
   .catch((err) => {
     console.log(err);
   });
+  return false;
 }
 
 async function Authorization() {
