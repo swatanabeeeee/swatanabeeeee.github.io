@@ -16,9 +16,10 @@ const ID_tonchann = 3458764518031779508;
 const ID_daikichi = 3458764518031867948;
 
 miro.onReady(() => {
+  let isBoard = false;
+  GetBoardId()
+  console.log(isBoard);
   Authorization();
-  let loglog = GetBoardId()
-  console.log(loglog);
   // console.log(miro.board.getInfo().id)
 })
 
@@ -26,13 +27,13 @@ async function GetBoardId() {
   await miro.board.getInfo()
   .then((result) => {
     if(result.id=="o9J_lwQzDZE="){
-      return "ok";
+     isBoard = true;
     }
   })
   .catch((err) => {
     console.log(err);
   });
-  return "Unauthorized Board";
+  // return "Unauthorized Board";
 }
 
 async function Authorization() {
