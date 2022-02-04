@@ -27,10 +27,11 @@ async function GetBoardId() {
   await miro.board.getInfo()
   .then((result) => {
     if(result.id=="o9J_lwQzDZE="){
+      console.log("Authorized Board")
       Authorization();
     }
     else{
-      console.log('Authorized Board');
+      console.log('Unauthorized Board');
     }
   })
   .catch((err) => {
