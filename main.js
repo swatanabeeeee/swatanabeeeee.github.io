@@ -57,7 +57,7 @@ async function AuthorizeUser() {
   //画像を動かしてみる
   miro.board.widgets.update(
     {
-      id : "3458764516442959651",
+      id : "3458764518477594227",
       x : 3000,
     },
   )
