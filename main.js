@@ -54,6 +54,13 @@ async function AuthorizeUser() {
   getWidget(new Date().getHours())
   ChangeLocation(new Date())
   getUser();
+  //画像を動かしてみる
+  miro.board.widgets.update(
+    {
+      id : "3458764518476794643",
+      x : 3000,
+    },
+  )
 }
 
 async function ChangeLocation(date) {
@@ -103,13 +110,7 @@ async function getWidget(hour) {
   )
 }
 
-// //画像を動かしてみる
-// miro.board.widgets.update(
-//   {
-//     id : "3458764516442959651",
-//     x : 3000,
-//   },
-// )
+
 
 // window.on('beforeunload', function(e) {
 //   miro.board.widgets.update(
