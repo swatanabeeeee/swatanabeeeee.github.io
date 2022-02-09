@@ -55,12 +55,12 @@ async function AuthorizeUser() {
   ChangeLocation(new Date())
   getUser();
   //画像を動かしてみる
-  miro.board.widgets.update(
-    {
-      id : "3458764518476954771",
-      x : 3000,
-    },
-  )
+  // miro.board.widgets.update(
+  //   {
+  //     id : "3458764518477594227",
+  //     x : 3000,
+  //   },
+  // )
 }
 
 async function ChangeLocation(date) {
