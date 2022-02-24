@@ -1,0 +1,164 @@
+<html lang=ja>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="icon" href="image/logo.png">
+    <title>NabeLab</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-20 xl:pb-22">
+                <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                    <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+                        <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                            <div class="flex items-center justify-between w-full md:w-auto">
+                                <a href="index.html">
+                                    <img class="h-14 w-auto sm:h-14" src="image/logo.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:ml-8 md:pr-4 md:space-x-8">
+                            <div class="flex items-center">
+                                <img class="h-7 w-auto sm:h-7 ml-5" src="image/home.png">
+                                <a href="index.html" class="font-medium text-gray-500 hover:text-gray-900 underline">Home</a>
+
+                                <img class="h-8 w-auto sm:h-8 ml-8" src="image/research.png">
+                                <a href="Research.html" class="font-medium text-gray-500 hover:text-gray-900 underline">Research</a>
+                    
+                                <img class="h-8 w-auto sm:h-8 ml-8" src="image/product.png">
+                                <a href="Product.html" class="font-medium text-blue-500 hover:text-blue-900 underline ml-1">Product</a>
+                    
+                                <img class="h-7 w-auto sm:h-7 ml-8" src="image/job.png">
+                                <a href="Job.html" class="font-medium text-gray-500 hover:text-gray-900 underline">Job</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Product</h1>
+            <p class="lead text-muted">趣味で開発したシステムです！<br>システムは世の中の課題を解決するようなものを作りたいと考えています。
+        </div>
+
+        <a id="product"></a>
+        <div class="album py-5">
+            <div class="container element">     
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light" >
+                                <h4 class="my-0 fw-normal">自動議事録</h4>
+                            </div>
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/system.png">
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+                            <div class="card-body">
+                                <p class="card-text">自動議事録システムです。認識した言葉を時系列順で並びかえて表示してくれます。またscrapboxでのアイコン表示にも対応しています。</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" ><a class="link-secondary" href="https://record-of-proceedings.web.app">使用する</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light" >
+                                <h4 class="my-0 fw-normal">ランニングアプリ</h4>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            <div class="card-body">
+                                <p class="card-text">これは写真の解説文付きのカードです。自然に説明を加えることができます。しかしこの文章は少し長いかもしれません。</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
+                                    </div>
+                                    <small class="text-muted">9分</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light" >
+                                <h4 class="my-0 fw-normal">ランニングアプリ</h4>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            <div class="card-body">
+                                <p class="card-text">これは写真の解説文付きのカードです。自然に説明を加えることができます。しかしこの文章は少し長いかもしれません。</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
+                                    </div>
+                                    <small class="text-muted">9分</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ---------------------------------------- -->
+    
+        <div class="container foot">
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md px-md-5">
+                        <a href="index.html">
+                            <img class="mb-3" src="image/logo.png" alt="" width="150" height="150">
+                        </a>
+                        <small class="d-block mb-3 text-muted">&copy; NabeLab</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <a href="index.html">Home</a>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary" href="index.html#news">News</a></li>
+                            <li><a class="link-secondary" href="index.html#intro">Intro</a></li>
+                            <li><a class="link-secondary" href="index.html#skill">Skill</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <a href="Research.html">Research</a>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary" href="Research.html#research1">Research1</a></li>
+                            <li><a class="link-secondary" href="Research.html#research2">Research2</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <a href="Product.html">Product</a>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary" href="Product.html#product">Exhibition</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <a href="Job.html">Job</a>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary" href="Job.html#parttime1">Teacher</a></li>
+                            <li><a class="link-secondary" href="Job.html#parttime2">Cyber Campus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
